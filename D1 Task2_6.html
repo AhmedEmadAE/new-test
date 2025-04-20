@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2,3,4,5,6</title>
+</head>
+
+<body>
+    <div class="cv">
+        <h1>CV</h1>
+        <h2>المهارات اللغوية</h2>
+        <div class="skill">
+            <label for="english">English</label>
+            <meter id="english" value="70" min="0" max="100"></meter>
+        </div>
+        <div class="skill">
+            <label for="arabic">Arabic</label>
+            <meter id="arabic" value="95" min="0" max="100"></meter>
+        </div>
+        <div class="skill">
+            <label for="spanish">Spanish</label>
+            <meter id="spanish" value="50" min="0" max="100"></meter>
+        </div>
+    </div>
+
+    <hr>
+    <!-- الجزء بتاع تاريخ الميلاد -->
+    <h2>My Birthdate</h2>
+    <p>I was born on: <time datetime="2006-09-20">September 20, 2006</time></p>
+    <hr>
+
+    <audio id="audio" src="tast Audio .mp3"></audio>
+    <button onclick="document.getElementById('audio').play()">Play</button>
+    <button onclick="document.getElementById('audio').pause()">Pause</button>
+    <hr>
+
+    <video controls width="350" height="350">
+        <source src="Video test .mp4" type="video/mp4">
+
+    </video>
+    <hr>
+
+    <form>
+        <label for="browser">Choose a browser:</label>
+        <input list="browsers" id="browser" name="browser">
+        <datalist id="browsers">
+            <option value="Google Chrome">
+            <option value="Firefox">
+            <option value="Microsoft Edge">
+
+        </datalist>
+
+        <br><br>
+
+        <label for="file">Upload a file:</label>
+        <input type="file" id="file" name="file">
+
+        <br><br>
+
+        <label for="image">Image </label>
+        <input type="image" id="image" src="tast image.jpg" alt="Submit" width="300" height="300">
+
+        <br><br>
+
+        <label for="color"> color:</label>
+        <input type="color" id="color" name="color">
+
+        <br><br>
+
+        <label for="range">Select range:</label>
+        <input type="range" id="range" name="range" min="0" max="100">
+
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+    <script>
+        //جزء الجافاسكريبت بتاع تاريخ الميلاد
+        function displayDate() {
+            let dateInput = document.getElementById("birthdate").value;
+            if (dateInput) {
+                document.getElementById("display").innerHTML =
+                    `<p>تاريخ ميلادك هو: <time datetime="${dateInput}">${dateInput}</time></p>`;
+            }
+        }
+    </script>
+</body>
+
+</html>
